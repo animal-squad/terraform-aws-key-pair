@@ -22,3 +22,8 @@ output "type" {
   description = "key pair의 type"
   value       = aws_key_pair.key_pair.key_type
 }
+
+output "pem_key" {
+  description = "key pair의 PEM KEY"
+  value       = tls_private_key.key_pair.private_key_pem
+}
